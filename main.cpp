@@ -3,6 +3,8 @@
 #include <exception>
 #include <Windows.h>
 
+#define KEY_ZERO 0x30
+
 //throws std::runtime_error, with msg, when ptr is null
 template <typename Type>
 void checkAddressNotNull(Type* ptr, const std::string& msg);
@@ -31,6 +33,10 @@ int main(int args, char** argv)
 						
 			if (currAccount < lowerMoneyLimit) {
 				WriteProcessMemory(hProcess, addressMoneyVar, &lowerMoneyLimit, sizeof(lowerMoneyLimit), nullptr);
+			}
+
+			if (GetAsyncKeyState(KEY_ZERO)) {
+				break;
 			}
 		}
 	}
