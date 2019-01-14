@@ -9,6 +9,7 @@ void checkAddressNotNull(Type* ptr, const std::string& msg);
 
 //constants
 const std::string gameWindowTitle = "Warblade 1.34";
+const unsigned int lowerMoneyLimit = 3000;
 const LPVOID addressMoneyVar = reinterpret_cast<LPVOID*>(0x00848794);
 
 int main(int args, char** argv)
@@ -24,8 +25,15 @@ int main(int args, char** argv)
 		HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, false, processId);
 		checkAddressNotNull(hProcess, "Cannot open process!\n");
 
-		int newVal = 11220;
-		WriteProcessMemory(hProcess, addressMoneyVar, &newVal, sizeof(newVal), nullptr);
+		while (true) {
+			int currAccount;
+			ReadProcessMemory(hProcess, addressMoneyVar, &currAccount, sizeof(currAccount), nullptr);
+						
+			if (currAccount < lowerMoneyLimit) {
+				WriteProcessMemory(hProcess, addressMoneyVar, &lowerMoneyLimit, sizeof(lowerMoneyLimit), nullptr);
+			}
+		}
+
 	}
 	catch (std::runtime_error& ex) {
 		std::cerr << ex.what() << std::endl;
