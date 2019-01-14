@@ -16,14 +16,14 @@ int main(int args, char** argv)
 {
 	try {
 		HWND gameWindow = FindWindowA(nullptr, gameWindowTitle.c_str());
-		checkAddressNotNull(gameWindow, "Cannot find window handler!\n");
+		checkAddressNotNull(gameWindow, "Cannot find window handler !");
 
 		DWORD processId;
 		GetWindowThreadProcessId(gameWindow, &processId);
-		checkAddressNotNull(&processId, "Cannot find process id!\n");
+		checkAddressNotNull(&processId, "Cannot find process id !");
 
 		HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, false, processId);
-		checkAddressNotNull(hProcess, "Cannot open process!\n");
+		checkAddressNotNull(hProcess, "Cannot open process !");
 
 		while (true) {
 			int currAccount;
@@ -33,10 +33,12 @@ int main(int args, char** argv)
 				WriteProcessMemory(hProcess, addressMoneyVar, &lowerMoneyLimit, sizeof(lowerMoneyLimit), nullptr);
 			}
 		}
-
 	}
 	catch (std::runtime_error& ex) {
 		std::cerr << ex.what() << std::endl;
+	}
+	catch (...) {
+		std::cerr << "Unknown exception" << std::endl;
 	}
 
 	return 0;
