@@ -1,33 +1,42 @@
 #include <iostream>
 #include <string>
+#include <exception>
 #include <Windows.h>
 
+//throws std::runtime_error, with msg, when ptr is null
+template <typename Type>
+void checkAddressNotNull(Type* ptr, const std::string& msg);
+
+//constants
 const std::string gameWindowTitle = "Warblade 1.34";
+const LPVOID addressMoneyVar = reinterpret_cast<LPVOID*>(0x00848794);
 
 int main(int args, char** argv)
 {
-	HWND gameWindow = FindWindowA(nullptr, gameWindowTitle.c_str());
-	
-	if (!gameWindow) {
-		std::cerr << "Cannot find window handler!\n";
-		return -1;
-	}
+	try {
+		HWND gameWindow = FindWindowA(nullptr, gameWindowTitle.c_str());
+		checkAddressNotNull(gameWindow, "Cannot find window handler!\n");
 
-	DWORD processId;
-	GetWindowThreadProcessId(gameWindow, &processId);
-	if (!processId) {
-		std::cerr << "Cannot find process id!\n";
-		return -1;
-	}
-	
-	HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, false, processId);
-	if (!hProcess) {
-		std::cerr << "Cannot open process!\n";
-		return -1;
-	}
+		DWORD processId;
+		GetWindowThreadProcessId(gameWindow, &processId);
+		checkAddressNotNull(&processId, "Cannot find process id!\n");
 
-	int newVal = 1000;
-	WriteProcessMemory(hProcess, (LPVOID)0x00848794, &newVal, sizeof(newVal), nullptr);
+		HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, false, processId);
+		checkAddressNotNull(hProcess, "Cannot open process!\n");
+
+		int newVal = 11220;
+		WriteProcessMemory(hProcess, addressMoneyVar, &newVal, sizeof(newVal), nullptr);
+	}
+	catch (std::runtime_error& ex) {
+		std::cerr << ex.what() << std::endl;
+	}
 
 	return 0;
+}
+
+template <typename Type>
+void checkAddressNotNull(Type* ptr, const std::string& msg) {
+	if (!ptr) {
+		throw std::runtime_error(msg);
+	}
 }
