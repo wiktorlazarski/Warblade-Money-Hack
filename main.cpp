@@ -11,7 +11,7 @@ void checkAddressNotNull(Type* ptr, const std::string& msg);
 
 //constants
 const std::string gameWindowTitle = "Warblade 1.34";
-const unsigned int lowerMoneyLimit = 3000;
+const unsigned int lowerMoneyLimit = 4000;
 const LPVOID addressMoneyVar = reinterpret_cast<LPVOID*>(0x00848794);
 
 int main(int args, char** argv)
