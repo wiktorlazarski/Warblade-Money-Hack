@@ -27,6 +27,7 @@ int main(int args, char** argv)
 		HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, false, processId);
 		checkAddressNotNull(hProcess, "Cannot open process !");
 
+		std::cout << "Press 0 to finish hacking\n";
 		while (true) {
 			int currAccount;
 			ReadProcessMemory(hProcess, addressMoneyVar, &currAccount, sizeof(currAccount), nullptr);
