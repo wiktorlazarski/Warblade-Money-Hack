@@ -4,11 +4,7 @@ Money Hack for a famous game Warblade 1.34. Provides unlimited money amount in a
 ## Dependencies
 Windows.h
 
-## Before
-Look at the upper left corner to see how the money amount changes.
+## Program overiview
+Look at the upper left corner to see how the money amount changes. It can be highlighted that despite buying perks the money amount remains unchanged.
 
-![alt text](https://db3pap002files.storage.live.com/y4m2VGDiMW3pFgvCADyhWXEKuGAVfF1Ymofrlt7bHwA_n9eUnZjAVHjkcPOAvs1YIbqpfVUZUV_OIW-BJhohkiXenru1WpauZxuAtpypQsFNjzSW1Rlf82YrbgnlxsjZdUsVMIyWpXjggtMeb5iKg_1H_58BGAf-U3Yy6l2Mbk2M5VlFsgtJiWBlYYGsMTqE1wZCmNKxMfktqeqnOF1jE44bg/before.jpg?psid=1&width=802&height=627)
-
-## After
-
-![alt text](https://db3pap002files.storage.live.com/y4mOoQlBNgYFTAs3FNXRSlkHoZi8N_NHKxqXm0FpU7y7lI_yESkkVMZ9-EkvVu9P6lyZ7eI2VaLKBgDtb2DEmxv-uuYqm3r_CVI7qOByAmjVo1A8w6GEUMyW2IaCgc8tVJ0CEMJq182L497s2NPZW_7kocw8pRnP_z3bLRQ79Um5FSGBiQKN1SNq5keHwiZcYLaHTeIxvFMFs0HWQMmRCvQAg/after.jpg?psid=1&width=802&height=627)
+![alt text](https://uywoxq.db.files.1drv.com/y4m3KkH6aSLRTFFLEM1d6yHj5c2cDRX6mukOHrxEHXkWEAV4ZoEkwXu78ycvN54wsgSveNk1zlKYZ06btI9fBtvm7PNVb_oV-sd0wMUw2CnocSIOLnnkCx-Z584gf4_G6dc8y_OKngAHbdn1gxs2anIQXdK2htN3LaltMjYpulAJyxZbhVf8wRifF_2Gk1jJMqVOdHzLHVKAtO5snVIdx3B5Q/overview.gif?download&psid=1)
