@@ -7,4 +7,10 @@ Windows.h
 ## Program overiview
 Look at the upper left corner to see how the money amount changes. It can be highlighted that despite buying perks the money amount remains unchanged.
 
-![alt text](https://uywoxq.db.files.1drv.com/y4m3KkH6aSLRTFFLEM1d6yHj5c2cDRX6mukOHrxEHXkWEAV4ZoEkwXu78ycvN54wsgSveNk1zlKYZ06btI9fBtvm7PNVb_oV-sd0wMUw2CnocSIOLnnkCx-Z584gf4_G6dc8y_OKngAHbdn1gxs2anIQXdK2htN3LaltMjYpulAJyxZbhVf8wRifF_2Gk1jJMqVOdHzLHVKAtO5snVIdx3B5Q/overview.gif?download&psid=1)
+### Before launching the money hack
+
+![alt text](https://db3pap002files.storage.live.com/y4mblGiIP6-c2kulK0TFaFIyczGPnsuc9DdZld0izC1jljJWgB1_QJA7M4gZB4LLVmuL_pR-jye5QphuBx7iE1BnoLVjEfpsV5pDDG5U7qhjRWSDEKDOGPzKVkIQqn0LfrHZO5U3mXRHslqL8BC-LaGZGXtfIKM_BTsCLsAYhWg0XLMheevzfvX_Isl0J8qo2_8MvD6RTMPx9HWbvc7BrdtYw/before.png?psid=1&width=802&height=627)
+
+## After launching the money hack
+
+![alt text](https://db3pap002files.storage.live.com/y4mILhCyeDoDWmX0i822kjpvkmXRGEPp24fUnbuWkI76DSDGSv--4nxGZKULYlJt-rEuUlKJQjqK-tdZw9ZRzAYz_q1ZfaP04Z3USN0EIFxQiENTP-3QzSp_3Obqp8EQhpsRUcBEe7K3sJkuc-dL5X76x28trsGIryEwY9qqo6qeMqLNA-wy9HIw3tealHwI8NcMKFPNv-vBXZ_T8Jp5vqJaA/after.png?psid=1&width=802&height=627)
